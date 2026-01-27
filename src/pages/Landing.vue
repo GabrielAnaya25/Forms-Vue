@@ -20,22 +20,30 @@
         <h2>Características</h2>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon">📋</div>
+            <div class="feature-icon">
+              <ClipboardList :size="48" />
+            </div>
             <h3>Formularios Dinámicos</h3>
             <p>Crea formularios personalizados sin necesidad de código</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">🔒</div>
+            <div class="feature-icon">
+              <Shield :size="48" />
+            </div>
             <h3>Seguro</h3>
             <p>Tus datos están protegidos con encriptación</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">⚡</div>
+            <div class="feature-icon">
+              <Zap :size="48" />
+            </div>
             <h3>Rápido</h3>
             <p>Rendimiento optimizado para la mejor experiencia</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">📊</div>
+            <div class="feature-icon">
+              <BarChart3 :size="48" />
+            </div>
             <h3>Análisis</h3>
             <p>Visualiza estadísticas y reportes en tiempo real</p>
           </div>
@@ -52,6 +60,7 @@
 </template>
 
 <script setup>
+import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
 </script>
 
 <style scoped>
@@ -91,23 +100,23 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #6366f1;
+  color: #04787c;
 }
 
 .login-btn {
-  color: #6366f1;
+  color: #04787c;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .login-btn:hover {
-  color: #4f46e5;
+  color: #2f2f2e;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #04787c 0%, #2f2f2e 100%);
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -126,8 +135,8 @@
 
 .cta-btn {
   display: inline-block;
-  background: #fff;
-  color: #667eea;
+  background: #e9d8aa;
+  color: #2f2f2e;
   padding: 12px 40px;
   border-radius: 50px;
   text-decoration: none;
@@ -138,6 +147,7 @@
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #d4c8a0;
 }
 
 /* Features Section */
@@ -180,7 +190,11 @@
 
 .feature-card h3 {
   margin-bottom: 0.5rem;
-  color: #667eea;
+  color: #04787c;
+}
+
+.feature-icon {
+  color: #04787c;
 }
 
 .feature-card p {

@@ -38,7 +38,14 @@
         </div>
 
         <button type="submit" class="submit-btn" :disabled="loading">
-          {{ loading ? 'Iniciando sesión...' : 'Iniciar Sesión' }}
+          <span v-if="loading" class="btn-content">
+            <Loader2 :size="18" class="spinner" />
+            Iniciando sesión...
+          </span>
+          <span v-else class="btn-content">
+            <LogIn :size="18" />
+            Iniciar Sesión
+          </span>
         </button>
 
         <div v-if="successMessage" class="success-message">
@@ -60,6 +67,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { Loader2, LogIn } from 'lucide-vue-next'
 
 const form = ref({
   email: '',
@@ -116,7 +124,7 @@ const handleLogin = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #04787c 0%, #2f2f2e 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -179,14 +187,14 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="text"]:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #04787c;
 }
 
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #667eea;
+  accent-color: #04787c;
 }
 
 .error {
@@ -196,8 +204,8 @@ input[type="checkbox"] {
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #04787c 0%, #2f2f2e 100%);
+  color: #e9d8aa;
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
@@ -206,11 +214,35 @@ input[type="checkbox"] {
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 15px rgba(4, 120, 124, 0.4);
 }
 
 .submit-btn:disabled {
@@ -235,13 +267,13 @@ input[type="checkbox"] {
 }
 
 .link {
-  color: #667eea;
+  color: #04787c;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .link:hover {
-  color: #764ba2;
+  color: #e9d8aa;
   text-decoration: underline;
 }
 
@@ -253,7 +285,7 @@ input[type="checkbox"] {
 }
 
 .signup-link a {
-  color: #667eea;
+  color: #04787c;
   text-decoration: none;
   font-weight: 600;
 }
