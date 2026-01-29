@@ -1,11 +1,6 @@
 <template>
   <div class="landing">
-    <nav class="navbar">
-      <div class="container">
-        <div class="logo">FormsVue</div>
-        <BaseButton to="/login" variant="ghost" class="login-btn">Iniciar Sesión</BaseButton>
-      </div>
-    </nav>
+    <Navbar />
 
     <header class="hero">
       <div class="container">
@@ -51,17 +46,14 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 FormsVue. Todos los derechos reservados.</p>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
-import BaseButton from '../components/BaseButton.vue'
+import Navbar from '../components/Navbar.vue'
+import Footer from '../components/Footer.vue'
 </script>
 
 <style scoped>
@@ -83,37 +75,7 @@ import BaseButton from '../components/BaseButton.vue'
 }
 
 /* Navbar */
-.navbar {
-  background: #fff;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
-}
-
-.login-btn {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.login-btn:hover {
-  color: var(--color-primary-dark);
-}
+/* Navbar moved to component */
 
 /* Hero Section */
 .hero {
@@ -189,12 +151,7 @@ import BaseButton from '../components/BaseButton.vue'
 }
 
 /* Footer */
-.footer {
-  background: var(--footer-bg);
-  color: var(--text-light);
-  text-align: center;
-  padding: 2rem 0;
-}
+/* Footer moved to component */
 
 /* Responsive */
 @media (max-width: 768px) {
