@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <Navbar />
+    
 
     <header class="hero">
       <div class="container">
@@ -46,14 +46,12 @@
       </div>
     </section>
 
-    <Footer />
+    
   </div>
 </template>
 
 <script setup>
 import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
-import Navbar from '../components/Navbar.vue'
-import Footer from '../components/Footer.vue'
 </script>
 
 <style scoped>

@@ -6,8 +6,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--text-light);
-  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  background-color: var(--bg-muted);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,10 +26,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-muted);
 }
 
 h1 {
@@ -61,13 +60,12 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
   padding: 2rem;
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     color: var(--text-light);
     background-color: var(--bg-dark);
@@ -76,6 +74,9 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #1a1a1a;
+  }
+  body {
+    background-color: var(--bg-dark);
   }
 }
