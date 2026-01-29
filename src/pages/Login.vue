@@ -37,7 +37,7 @@
           <label for="remember">Recuérdame</label>
         </div>
 
-        <button type="submit" class="submit-btn" :disabled="loading">
+        <BaseButton type="submit" :disabled="loading" variant="primary">
           <span v-if="loading" class="btn-content">
             <Loader2 :size="18" class="spinner" />
             Iniciando sesión...
@@ -46,7 +46,7 @@
             <LogIn :size="18" />
             Iniciar Sesión
           </span>
-        </button>
+        </BaseButton>
 
         <div v-if="successMessage" class="success-message">
           {{ successMessage }}
@@ -68,6 +68,7 @@
 <script setup>
 import { ref } from 'vue'
 import { Loader2, LogIn } from 'lucide-vue-next'
+import BaseButton from '../components/BaseButton.vue'
 
 const form = ref({
   email: '',
@@ -203,22 +204,7 @@ input[type="checkbox"] {
   margin-top: -0.25rem;
 }
 
-.submit-btn {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: var(--color-accent);
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  margin-top: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
+/* submit styles moved to BaseButton component */
 
 .btn-content {
   display: flex;
@@ -240,15 +226,7 @@ input[type="checkbox"] {
   }
 }
 
-.submit-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(4, 120, 124, 0.4);
-}
-
-.submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
+/* hover/disabled handled by BaseButton */
 
 .success-message {
   background: var(--success);

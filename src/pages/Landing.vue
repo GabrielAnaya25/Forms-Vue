@@ -3,7 +3,7 @@
     <nav class="navbar">
       <div class="container">
         <div class="logo">FormsVue</div>
-        <router-link to="/login" class="login-btn">Iniciar Sesión</router-link>
+        <BaseButton to="/login" variant="ghost" class="login-btn">Iniciar Sesión</BaseButton>
       </div>
     </nav>
 
@@ -11,7 +11,7 @@
       <div class="container">
         <h1>Bienvenido a FormsVue</h1>
         <p>La mejor plataforma para gestionar tus formularios</p>
-        <router-link to="/login" class="cta-btn">Comienza Ahora</router-link>
+        <BaseButton to="/login" variant="accent">Comienza Ahora</BaseButton>
       </div>
     </header>
 
@@ -61,6 +61,7 @@
 
 <script setup>
 import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
+import BaseButton from '../components/BaseButton.vue'
 </script>
 
 <style scoped>
@@ -133,22 +134,7 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
   opacity: 0.9;
 }
 
-.cta-btn {
-  display: inline-block;
-  background: var(--color-accent);
-  color: var(--color-primary-dark);
-  padding: 12px 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: var(--color-accent-600);
-}
+/* CTA handled by BaseButton (variant=accent) */
 
 /* Features Section */
 .features {
