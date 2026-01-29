@@ -1,0 +1,32 @@
+/* CSS variables centralizadas para temas y colores */
+:root {
+  --color-primary: #04787c;
+  --color-primary-dark: #2f2f2e;
+  --color-accent: #e9d8aa;
+  --color-accent-600: #d4c8a0;
+
+  --bg-dark: #242424;
+  --text-light: rgba(255, 255, 255, 0.87);
+  --text-dark: #333333;
+  --link: #646cff;
+
+  --card-bg: #ffffff;
+  --footer-bg: #333333;
+  --bg-muted: #f9fafb;
+  --border: #e0e0e0;
+
+  --error: #dc2626;
+  --success: #dcfce7;
+  --success-text: #166534;
+
+  --muted: #666666;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-dark: #ffffff;
+    --text-light: #213547;
+    --text-dark: #213547;
+    --card-bg: #ffffff;
+  }
+}

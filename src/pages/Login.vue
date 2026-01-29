@@ -124,12 +124,12 @@ const handleLogin = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #04787c 0%, #2f2f2e 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .login-card {
-  background: white;
+  background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -139,7 +139,7 @@ const handleLogin = async () => {
 
 .login-card h1 {
   text-align: center;
-  color: #333;
+  color: var(--text-dark);
   margin-bottom: 2rem;
   font-size: 1.8rem;
 }
@@ -176,7 +176,7 @@ input[type="email"],
 input[type="password"],
 input[type="text"] {
   padding: 0.75rem;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--border);
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
@@ -187,25 +187,25 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="text"]:focus {
   outline: none;
-  border-color: #04787c;
+  border-color: var(--color-primary);
 }
 
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #04787c;
+  accent-color: var(--color-primary);
 }
 
 .error {
-  color: #dc2626;
+  color: var(--error);
   font-size: 0.85rem;
   margin-top: -0.25rem;
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #04787c 0%, #2f2f2e 100%);
-  color: #e9d8aa;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-accent);
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
@@ -251,8 +251,8 @@ input[type="checkbox"] {
 }
 
 .success-message {
-  background: #dcfce7;
-  color: #166534;
+  background: var(--success);
+  color: var(--success-text);
   padding: 0.75rem;
   border-radius: 8px;
   text-align: center;
@@ -267,13 +267,13 @@ input[type="checkbox"] {
 }
 
 .link {
-  color: #04787c;
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .link:hover {
-  color: #e9d8aa;
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
@@ -285,7 +285,7 @@ input[type="checkbox"] {
 }
 
 .signup-link a {
-  color: #04787c;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
 }

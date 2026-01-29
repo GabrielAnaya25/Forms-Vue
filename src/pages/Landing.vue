@@ -72,7 +72,7 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
 
 .landing {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: var(--text-dark);
 }
 
 .container {
@@ -100,24 +100,24 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #04787c;
+  color: var(--color-primary);
 }
 
 .login-btn {
-  color: #04787c;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .login-btn:hover {
-  color: #2f2f2e;
+  color: var(--color-primary-dark);
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #04787c 0%, #2f2f2e 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--text-light);
   padding: 100px 0;
   text-align: center;
 }
@@ -135,8 +135,8 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
 
 .cta-btn {
   display: inline-block;
-  background: #e9d8aa;
-  color: #2f2f2e;
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
   padding: 12px 40px;
   border-radius: 50px;
   text-decoration: none;
@@ -147,20 +147,20 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: #d4c8a0;
+  background: var(--color-accent-600);
 }
 
 /* Features Section */
 .features {
   padding: 80px 0;
-  background: #f9fafb;
+  background: var(--bg-muted);
 }
 
 .features h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #333;
+  color: var(--text-dark);
 }
 
 .features-grid {
@@ -170,7 +170,7 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
 }
 
 .feature-card {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
@@ -190,22 +190,22 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
 
 .feature-card h3 {
   margin-bottom: 0.5rem;
-  color: #04787c;
+  color: var(--color-primary);
 }
 
 .feature-icon {
-  color: #04787c;
+  color: var(--color-primary);
 }
 
 .feature-card p {
-  color: #666;
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
 /* Footer */
 .footer {
-  background: #333;
-  color: white;
+  background: var(--footer-bg);
+  color: var(--text-light);
   text-align: center;
   padding: 2rem 0;
 }
