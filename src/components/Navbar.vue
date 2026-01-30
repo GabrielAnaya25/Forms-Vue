@@ -22,9 +22,6 @@ import BaseButton from './BaseButton.vue'
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;

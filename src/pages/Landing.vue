@@ -66,11 +66,7 @@ import { ClipboardList, Shield, Zap, BarChart3 } from 'lucide-vue-next'
   color: var(--text-dark);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+/* container handled globally */
 
 /* Navbar */
 /* Navbar moved to component */
